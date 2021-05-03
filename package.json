@@ -1,6 +1,6 @@
 {
   "name": "@bscop/use-keydown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom React hook to fire an event when user press one, or more specific keys.",
   "main": "package/dist/index.js",
   "module": "package/dist/index.es.js",
