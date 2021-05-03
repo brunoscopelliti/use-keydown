@@ -31,7 +31,13 @@
     "LICENSE",
     "README.md"
   ],
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react hook",
+    "use-keydown",
+    "hook keydown",
+    "hook listen key"
+  ],
   "author": "Bruno Scopelliti",
   "license": "MIT",
   "bugs": {
