@@ -1,22 +1,22 @@
-# template-react-hook
+# use-keydown
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/brunoscopelliti/template-react-hook/blob/main/LICENSE)
-[![npm version](https://img.shields.io/npm/v/@bscop/template-react-hook.svg?style=flat)](https://www.npmjs.com/package/@bscop/template-react-hook)
-[![CircleCI Status](https://circleci.com/gh/brunoscopelliti/template-react-hook.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/brunoscopelliti/template-react-hook)
-[![Coverage](https://img.shields.io/codecov/c/github/brunoscopelliti/template-react-hook)](https://app.codecov.io/gh/brunoscopelliti/template-react-hook/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/brunoscopelliti/use-keydown/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@bscop/use-keydown.svg?style=flat)](https://www.npmjs.com/package/@bscop/use-keydown)
+[![CircleCI Status](https://circleci.com/gh/brunoscopelliti/use-keydown.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/brunoscopelliti/use-keydown)
+[![Coverage](https://img.shields.io/codecov/c/github/brunoscopelliti/use-keydown)](https://app.codecov.io/gh/brunoscopelliti/use-keydown/)
 
-A template to create a new React custom hook.
+A custom React hook to fire an event when user press one, or more specific keys.
 
 ## Install
 
 ```
-npm i @bscop/template-react-hook
+npm i @bscop/use-keydown
 ```
 
 ## Usage
 
 ```js
-import useHook from "@bscop/template-react-hook";
+import useHook from "@bscop/use-keydown";
 
 useHook();
 ```
