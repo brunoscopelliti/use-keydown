@@ -15,11 +15,41 @@ npm i @bscop/use-keydown
 
 ## Usage
 
-```js
-import useHook from "@bscop/use-keydown";
+Default behavior:
 
-useHook();
+```js
+import useKeydown from "@bscop/use-keydown";
+
+useKeydown(
+  (event) => {
+    console.log(">", event.code);
+  }
+);
 ```
+
+Custom behavior:
+
+```js
+import useKeydown from "@bscop/use-keydown";
+
+useKeydown(
+  (event) => {
+    console.log(">", event.code);
+  },
+  {
+    active: true,
+    keys: [
+      "ArrowUp",
+      "ArrowDown"
+    ]
+  }
+);
+```
+
+- `active`: when is set to `false` the hook won't register the event listener.
+
+- `keys`: defines the key codes for which the handler will be executed. You can omit it, to listen
+for all the possible keys.
 
 ## Contribute
 

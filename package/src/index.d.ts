@@ -1,8 +1,10 @@
-type HookState = {
-  count : number;
-  increment : () => void;
-};
+type EventHandler = () => void;
 
-declare const useCounter : () => HookState;
+type HookOptions = {
+  active ?: boolean;
+  keys ?: string | string[];
+}
 
-export default useCounter;
+declare const useKeydown : (handler : EventHandler, opts : HookOptions) => void;
+
+export default useKeydown;

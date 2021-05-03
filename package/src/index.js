@@ -1,12 +1,52 @@
-import { useState, useCallback } from "react";
+import { useEffect } from "react";
 
-const useCounter =
-  () => {
-    const [count, setCount] = useState(0);
+/**
+ * @typedef {Object} HookOptions
+ * @property {string|string[]} [keys]
+ * @property {boolean} [active]
+ */
 
-    const increment = useCallback(() => setCount((x) => x + 1), []);
+/**
+ * A custom React hook to fire an event when user press one,
+ * or more specific keys.
+ * @name useKeydown
+ * @param {Function} handler
+ * @param {HookOptions} opts
+ */
+const useKeydown =
+  (handler, opts) => {
+    const { active = true, keys } = opts || {};
 
-    return { count, increment };
+    useEffect(
+      () => {
+        /**
+         * @name onKeydown
+         * @param {KeyboardEvent} event
+         * @returns {void}
+         */
+        const onKeydown =
+          (event) => {
+            if (
+              keys == null ||
+              keys === event.code ||
+              (Array.isArray(keys) && keys.includes(event.code))
+            ) {
+              handler(event);
+            }
+          };
+
+        if (active) {
+          document.addEventListener("keydown", onKeydown);
+        }
+
+        return () => {
+          if (active) {
+            document.removeEventListener("keydown", onKeydown);
+          }
+        };
+      },
+      [active, handler, keys]
+    );
   };
 
-export default useCounter;
+export default useKeydown;
