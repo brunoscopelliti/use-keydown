@@ -1,5 +1,3 @@
-/* eslint-env jest */
-
 import { fireEvent } from "@testing-library/react";
 import { renderHook } from "@testing-library/react-hooks";
 
@@ -58,7 +56,7 @@ describe("useKeydown", () => {
     expect(spy).not.toHaveBeenCalled();
   });
 
-  it("executes handler on specific keydown", () => {
+  it("executes handler on specific keydown / multiple registered", () => {
     const spy = jest.fn();
 
     renderHook(() => useKeydown(spy, { keys: ["Enter", "Escape"] }));
