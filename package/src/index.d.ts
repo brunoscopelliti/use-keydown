@@ -1,10 +1,10 @@
 type EventHandler = () => void;
 
-type HookOptions = {
+export type HookOptions = {
   active ?: boolean;
   keys ?: string | string[];
 }
 
-declare const useKeydown : (handler : EventHandler, opts : HookOptions) => void;
+declare const useKeydown : (handler : EventHandler, opts ?: HookOptions) => void;
 
 export default useKeydown;

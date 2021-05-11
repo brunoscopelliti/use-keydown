@@ -6,7 +6,8 @@
   ],
   "plugins": [
     "jest",
-    "react-hooks"
+    "react-hooks",
+    "testing-library"
   ],
   "rules": {
     "jest/prefer-expect-assertions": 0
@@ -15,5 +16,14 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "extends": ["plugin:testing-library/react"],
+      "rules": {
+        "testing-library/prefer-screen-queries": 0
+      }
+    }
+  ]
 }

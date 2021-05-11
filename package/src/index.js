@@ -1,17 +1,11 @@
 import { useEffect } from "react";
 
 /**
- * @typedef {Object} HookOptions
- * @property {string|string[]} [keys]
- * @property {boolean} [active]
- */
-
-/**
  * A custom React hook to fire an event when user press one,
  * or more specific keys.
  * @name useKeydown
  * @param {Function} handler
- * @param {HookOptions} opts
+ * @param {import("./index").HookOptions} [opts]
  */
 const useKeydown =
   (handler, opts) => {
